@@ -1,0 +1,206 @@
+{
+  "header": {
+    "brand": "VAN International",
+    "nav": {
+      "about": "The Group",
+      "activities": "Our Activities", 
+      "projects": "Projects",
+      "values": "Values",
+      "contact": "Contact",
+      "quote": "Request a Quote"
+    }
+  },
+  "hero": {
+    "title": "VAN builds, powers and connects the future.",
+    "description": "VAN International Group brings together complementary expertise through VAN Petroleum, VAN BTP and VAN Logistics & Transport to offer reliable, structured solutions adapted to the needs of businesses, institutions and territories.",
+    "cta1": "Discover our activities",
+    "cta2": "Request a quote",
+    "activities": "Our key expertise",
+    "stats": {
+      "poles": "3 units",
+      "polesDesc": "complementary businesses",
+      "quality": "+100%",
+      "qualityDesc": "quality & safety commitment",
+      "reactivity": "24/7",
+      "reactivityDesc": "operational reactivity"
+    },
+    "activities": {
+      "petroleum": {
+        "title": "VAN Petroleum",
+        "text": "Service stations, petroleum product distribution and associated services."
+      },
+      "btp": {
+        "title": "VAN BTP",
+        "text": "Construction of industrial infrastructure and specialized buildings."
+      },
+      "logistics": {
+        "title": "VAN Logistics & Transport",
+        "text": "Goods transportation and supply chain management."
+      }
+    }
+  },
+  "about": {
+    "title": "A multisectoral group serving Africa",
+    "subtitle": "Over 15 years of expertise in industrial and logistics development",
+    "description": "Founded in 2008, VAN International Group has established itself as a major player in the energy, construction and logistics sectors in Central Africa. Our expertise covers the entire value chain, from supply to final distribution.",
+    "vision": "To be a reference player in energy, construction and logistics.",
+    "mission": "To provide concrete, reliable and sustainable solutions that support economic development.",
+    "engagement": "To put safety, service quality and customer satisfaction at the center of every operation.",
+    "sectors": {
+      "energy": {
+        "title": "VAN Petroleum",
+        "description": "Distribution of petroleum products and associated services"
+      },
+      "construction": {
+        "title": "VAN BTP", 
+        "description": "Construction of industrial infrastructure and buildings"
+      },
+      "logistics": {
+        "title": "VAN Logistics & Transport",
+        "description": "Transport solutions and supply chain management"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Complete solutions tailored to your needs",
+    "supply": {
+      "title": "Supply & Distribution",
+      "text": "Continuous supply of petroleum products and construction materials"
+    },
+    "construction": {
+      "title": "Construction & BTP",
+      "text": "Realization of industrial infrastructure and buildings"
+    },
+    "logistics": {
+      "title": "Logistics & Transport",
+      "text": "Complete supply chain management and goods transportation"
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "text": "Maintenance services and technical support for your equipment"
+    }
+  },
+  "metrics": {
+    "title": "Our achievements in figures",
+    "items": {
+      "experience": {
+        "title": "Years of experience",
+        "value": "15+",
+        "description": "In the energy and construction sector"
+      },
+      "projects": {
+        "title": "Projects completed",
+        "value": "500+",
+        "description": "Through our three business units"
+      },
+      "employees": {
+        "title": "Employees",
+        "value": "300+",
+        "description": "Qualified and committed professionals"
+      },
+      "countries": {
+        "title": "Countries of operation",
+        "value": "5+",
+        "description": "In Central and West Africa"
+      }
+    }
+  },
+  "projects": {
+    "title": "Our Reference Projects",
+    "subtitle": "Achievements that demonstrate our expertise",
+    "viewAll": "View all projects",
+    "details": "View details"
+  },
+  "values": {
+    "title": "Our Values",
+    "subtitle": "The principles that guide our actions",
+    "items": {
+      "integrity": {
+        "title": "Integrity",
+        "description": "Our commitments are kept with honesty and transparency in all our relationships."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "We aim for the highest quality standards in the realization of our projects."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We integrate the best technologies and practices to anticipate needs."
+      },
+      "responsibility": {
+        "title": "Responsibility",
+        "description": "We act sustainably towards our employees, customers and the environment."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "Let's discuss your projects and find the best solutions",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Message",
+      "subject": "Subject",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Opening hours"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 VAN International Group. All rights reserved.",
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "VAN Admin",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "loading": "Connecting...",
+      "error": "Login error",
+      "test": "Test credentials",
+      "testEmail": "Email",
+      "testPassword": "Password"
+    },
+    "editing": {
+      "hero": {
+        "title": "Main title",
+        "description": "Description",
+        "videoUrl": "Video URL",
+        "posterUrl": "Background image URL",
+        "save": "Save",
+        "cancel": "Cancel"
+      },
+      "metrics": {
+        "add": "Add a metric",
+        "title": "Metric title",
+        "value": "Value",
+        "description": "Description",
+        "finish": "Finish"
+      },
+      "values": {
+        "add": "Add a value",
+        "title": "Value title",
+        "number": "Number (01-99)",
+        "description": "Description"
+      }
+    },
+    "mode": "Administration Mode",
+    "logout": "Logout"
+  }
+}

@@ -1,0 +1,175 @@
+/* Micro-interactions et détails humains */
+
+/* Animations subtiles */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Effets de focus améliorés */
+.btn:focus-visible {
+  outline: 2px solid var(--van-blue);
+  outline-offset: 2px;
+}
+
+/* Animations de chargement plus naturelles */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet de parallaxe subtil sur le hero */
+.hero-video-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 17, 27, 0.1) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(8, 17, 27, 0.3) 100%
+  );
+  pointer-events: none;
+}
+
+/* Micro-animations sur les icônes */
+.value-icon {
+  transition: all 0.3s ease;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Effet de brillance subtil */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+/* Espacements plus naturels */
+.section-header {
+  margin-bottom: 60px;
+}
+
+/* Variations dans les ombres */
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(15, 20, 25, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 8px 30px rgba(15, 20, 25, 0.1);
+}
+
+.shadow-strong {
+  box-shadow: 0 20px 60px rgba(15, 20, 25, 0.15);
+}
+
+/* Transitions plus naturelles */
+* {
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Effet de texture subtil */
+.value-card,
+.metric-box,
+.activity-card {
+  position: relative;
+}
+
+.value-card::before,
+.metric-box::before,
+.activity-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.01) 10px,
+      rgba(255, 255, 255, 0.01) 20px
+    );
+  pointer-events: none;
+}
+
+/* Animations au scroll plus douces */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-video-wrap {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .value-icon:nth-child(even) {
+    animation: float 4s ease-in-out infinite 1s;
+  }
+}
+
+/* Focus amélioré pour l'accessibilité */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--van-blue);
+  outline-offset: 2px;
+}
+
+/* Effet de loading naturel */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}

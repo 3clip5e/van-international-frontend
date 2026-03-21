@@ -1,0 +1,151 @@
+/* Formulaires d'édition améliorés */
+.hero-editor {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUpEditor 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes slideUpEditor {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-input {
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  border: 2px solid rgba(26, 61, 95, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--dark);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.hero-input:focus {
+  border-color: var(--van-blue);
+  background: var(--white);
+  box-shadow: 0 0 0 4px rgba(26, 61, 95, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero-input::placeholder {
+  color: rgba(26, 61, 95, 0.4);
+  font-style: italic;
+}
+
+.hero-title-input {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.hero-textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+  line-height: 1.6;
+}
+
+.hero-editor-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(26, 61, 95, 0.1);
+}
+
+.hero-editor-actions .btn {
+  flex: 1;
+  padding: 14px 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-editor-actions .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s ease;
+}
+
+.hero-editor-actions .btn:hover::before {
+  left: 100%;
+}
+
+/* Indicateurs visuels */
+.form-field-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--van-blue);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-field-hint {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(26, 61, 95, 0.4);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.form-field-success {
+  border-color: #10b981 !important;
+  background: rgba(16, 185, 129, 0.05) !important;
+}
+
+.form-field-error {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.05) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-editor {
+    padding: 24px 20px;
+    margin: 20px;
+  }
+  
+  .hero-input {
+    padding: 14px 16px;
+    font-size: 0.95rem;
+  }
+  
+  .hero-editor-actions {
+    flex-direction: column;
+  }
+  
+  .hero-editor-actions .btn {
+    width: 100%;
+  }
+}

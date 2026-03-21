@@ -1,0 +1,206 @@
+{
+  "header": {
+    "brand": "VAN International",
+    "nav": {
+      "about": "Le Groupe",
+      "activities": "Nos Activités", 
+      "projects": "Projets",
+      "values": "Valeurs",
+      "contact": "Contact",
+      "quote": "Demander un devis"
+    }
+  },
+  "hero": {
+    "title": "VAN construit, alimente et connecte l'avenir.",
+    "description": "VAN International Group réunit des expertises complémentaires à travers VAN Petroleum, VAN BTP et VAN Logistique & Transport pour offrir des solutions fiables, structurées et adaptées aux besoins des entreprises, des institutions et des territoires.",
+    "cta1": "Découvrir nos activités",
+    "cta2": "Demander un devis",
+    "activities": "Nos expertises clés",
+    "stats": {
+      "poles": "3 pôles",
+      "polesDesc": "des métiers complémentaires",
+      "quality": "+100%",
+      "qualityDesc": "engagement qualité & sécurité",
+      "reactivity": "24/7",
+      "reactivityDesc": "réactivité opérationnelle"
+    },
+    "activities": {
+      "petroleum": {
+        "title": "VAN Petroleum",
+        "text": "Stations-service, distribution de produits pétroliers et services associés."
+      },
+      "btp": {
+        "title": "VAN BTP",
+        "text": "Construction d'infrastructures industrielles et bâtiments spécialisés."
+      },
+      "logistics": {
+        "title": "VAN Logistique & Transport",
+        "text": "Transport de marchandises et gestion de la chaîne logistique."
+      }
+    }
+  },
+  "about": {
+    "title": "Un groupe multisectoriel au service de l'Afrique",
+    "subtitle": "Plus de 15 ans d'expertise au service du développement industriel et logistique",
+    "description": "Fondé en 2008, VAN International Group s'est imposé comme un acteur majeur dans les secteurs de l'énergie, de la construction et de la logistique en Afrique Centrale. Notre expertise couvre l'ensemble de la chaîne de valeur, de l'approvisionnement à la distribution finale.",
+    "vision": "Être un acteur de référence dans l'énergie, la construction et la logistique.",
+    "mission": "Fournir des solutions concrètes, fiables et durables qui soutiennent le développement économique.",
+    "engagement": "Mettre la sécurité, la qualité de service et la satisfaction client au centre de chaque opération.",
+    "sectors": {
+      "energy": {
+        "title": "VAN Petroleum",
+        "description": "Distribution de produits pétroliers et services associés"
+      },
+      "construction": {
+        "title": "VAN BTP", 
+        "description": "Construction d'infrastructures industrielles et bâtiments"
+      },
+      "logistics": {
+        "title": "VAN Logistique & Transport",
+        "description": "Solutions de transport et de gestion de la chaîne logistique"
+      }
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Des solutions complètes adaptées à vos besoins",
+    "supply": {
+      "title": "Approvisionnement & Distribution",
+      "text": "Fourniture continue en produits pétroliers et matériaux de construction"
+    },
+    "construction": {
+      "title": "Construction & BTP",
+      "text": "Réalisation d'infrastructures industrielles et bâtiments"
+    },
+    "logistics": {
+      "title": "Logistique & Transport",
+      "text": "Gestion complète de la chaîne logistique et transport de marchandises"
+    },
+    "maintenance": {
+      "title": "Maintenance & Support",
+      "text": "Services de maintenance et support technique pour vos équipements"
+    }
+  },
+  "metrics": {
+    "title": "Nos réalisations en chiffres",
+    "items": {
+      "experience": {
+        "title": "Années d'expérience",
+        "value": "15+",
+        "description": "Dans le secteur énergétique et BTP"
+      },
+      "projects": {
+        "title": "Projets réalisés",
+        "value": "500+",
+        "description": "À travers nos trois pôles d'activité"
+      },
+      "employees": {
+        "title": "Collaborateurs",
+        "value": "300+",
+        "description": "Professionnels qualifiés et engagés"
+      },
+      "countries": {
+        "title": "Pays d'intervention",
+        "value": "5+",
+        "description": "En Afrique Centrale et de l'Ouest"
+      }
+    }
+  },
+  "projects": {
+    "title": "Nos Projets Références",
+    "subtitle": "Des réalisations qui témoignent de notre expertise",
+    "viewAll": "Voir tous les projets",
+    "details": "Voir les détails"
+  },
+  "values": {
+    "title": "Nos Valeurs",
+    "subtitle": "Les principes qui guident notre action",
+    "items": {
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Nos engagements sont tenus avec honnêteté et transparence dans toutes nos relations."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "description": "Nous visons les plus hauts standards de qualité dans la réalisation de nos projets."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous intégrons les meilleures technologies et pratiques pour anticiper les besoins."
+      },
+      "responsibility": {
+        "title": "Responsabilité",
+        "description": "Nous agissons de manière durable envers nos collaborateurs, nos clients et l'environnement."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Discutons de vos projets et trouvons les meilleures solutions",
+    "form": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "company": "Entreprise",
+      "message": "Message",
+      "subject": "Sujet",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé avec succès !",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
+    },
+    "info": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Email",
+      "hours": "Heures d'ouverture"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 VAN International Group. Tous droits réservés.",
+    "links": {
+      "about": "À propos",
+      "services": "Services",
+      "projects": "Projets",
+      "contact": "Contact"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "VAN Admin",
+      "email": "Email",
+      "password": "Mot de passe",
+      "submit": "Se connecter",
+      "loading": "Connexion...",
+      "error": "Erreur de connexion",
+      "test": "Identifiants de test",
+      "testEmail": "Email",
+      "testPassword": "Mot de passe"
+    },
+    "editing": {
+      "hero": {
+        "title": "Titre principal",
+        "description": "Description",
+        "videoUrl": "URL de la vidéo",
+        "posterUrl": "URL de l'image de fond",
+        "save": "Sauvegarder",
+        "cancel": "Annuler"
+      },
+      "metrics": {
+        "add": "Ajouter une métrique",
+        "title": "Titre de la métrique",
+        "value": "Valeur",
+        "description": "Description",
+        "finish": "Terminer"
+      },
+      "values": {
+        "add": "Ajouter une valeur",
+        "title": "Titre de la valeur",
+        "number": "Numéro (01-99)",
+        "description": "Description"
+      }
+    },
+    "mode": "Mode Administration",
+    "logout": "Déconnexion"
+  }
+}
