@@ -1,7 +1,7 @@
 // API Configuration
 const API_BASE_URL = process.env.NODE_ENV === 'development' 
   ? 'http://localhost:3000/api' 
-  : 'https://votre-api-domain.com/api';
+  : 'https://van-international-backend.onrender.com/api';
 
 // API Service
 const apiService = {
