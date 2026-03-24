@@ -1,7 +1,9 @@
 // API Configuration
-const API_BASE_URL = process.env.NODE_ENV === 'development' 
-  ? 'http://localhost:3000/api' 
-  : 'https://van-international-backend.onrender.com/api';
+// const API_BASE_URL = process.env.NODE_ENV === 'development' 
+//   ? 'http://localhost:3000/api' 
+//   : 'https://van-international-backend.onrender.com/api';
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 // API Service
 const apiService = {
