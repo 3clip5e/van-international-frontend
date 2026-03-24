@@ -11,7 +11,7 @@ const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
     eyebrow: '',
     title: t('hero.title'),
     description: t('hero.description'),
-    videoUrl: 'https://cdn.coverr.co/videos/coverr-aerial-view-of-a-highway-1560088827401?download=1080p',
+    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-in-a-city-1078-large.mp4',
     posterUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop'
   });
 
@@ -50,16 +50,24 @@ const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
   const loadHeroData = async () => {
     try {
       const response = await apiService.get('/hero');
-      if (response.success && response.data.hero) {
+      console.log('Réponse API Hero:', response); // Debug
+      if (response.success && response.data && response.data.hero) {
         setHeroData(response.data.hero);
+      } else if (response.success && response.data) {
+        // Alternative: si les données sont directement dans response.data
+        setHeroData(response.data);
       }
     } catch (error) {
       console.error('Erreur chargement données Hero:', error);
-      // En cas d'erreur, utiliser les données sauvegardées en localStorage
-      const savedHeroData = localStorage.getItem('vanHeroData');
-      if (savedHeroData) {
-        setHeroData(JSON.parse(savedHeroData));
-      }
+      // En cas d'erreur, utiliser les données par défaut
+      const defaultData = {
+        eyebrow: '',
+        title: t('hero.title'),
+        description: t('hero.description'),
+        videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-in-a-city-1078-large.mp4',
+        posterUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop'
+      };
+      setHeroData(defaultData);
     }
   };
 
