@@ -5,22 +5,22 @@ import vanLogo from '../assets/van-logo.svg';
 import LanguageSelector from './LanguageSelector';
 
 const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   
   const navItems = [
-    { text: t('about'), id: 'about' },
-    { text: t('activities'), id: 'activities' },
-    { text: t('projects'), id: 'projects' },
-    { text: t('values'), id: 'values' },
-    { text: t('contact'), id: 'contact' }
+    { text: ready ? t('header.nav.about') : 'Le Groupe', id: 'about' },
+    { text: ready ? t('header.nav.activities') : 'Nos Activités', id: 'activities' },
+    { text: ready ? t('header.nav.projects') : 'Projets', id: 'projects' },
+    { text: ready ? t('header.nav.values') : 'Valeurs', id: 'values' },
+    { text: ready ? t('header.nav.contact') : 'Contact', id: 'contact' }
   ];
 
   return (
     <header className={`topbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav">
         <a href="#home" className="brand">
-          <img src={vanLogo} alt={t('brand')} className="brand-logo" />
-          <span>{t('brand')}</span>
+          <img src={vanLogo} alt={ready ? t('header.brand') : 'VAN International'} className="brand-logo" />
+          <span>{ready ? t('header.brand') : 'VAN International'}</span>
         </a>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
@@ -42,7 +42,7 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
               setMenuOpen(false);
             }}
           >
-            {t('header.nav.quote')}
+            {ready ? t('header.nav.quote') : 'Demander un devis'}
           </a>
         </nav>
 

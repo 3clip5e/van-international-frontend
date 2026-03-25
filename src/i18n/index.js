@@ -9,7 +9,7 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'fr',
-    debug: false,
+    debug: process.env.NODE_ENV === 'development',
     
     // Langues supportées
     supportedLngs: ['fr', 'en'],
@@ -25,6 +25,7 @@ i18n
     
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
+      addPath: '/locales/{{lng}}/{{ns}}.json',
     },
   });
 

@@ -4,37 +4,37 @@ import { scrollToSection } from '../utils/utils';
 import apiService from '../services/apiService';
 
 const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
-  const { t } = useTranslation();
+  const { t, ready } = useTranslation();
   const [isAdmin, setIsAdmin] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [heroData, setHeroData] = useState({
     eyebrow: '',
-    title: t('hero.title'),
-    description: t('hero.description'),
+    title: ready ? t('hero.title') : 'VAN construit, alimente et connecte l\'avenir.',
+    description: ready ? t('hero.description') : 'VAN International Group réunit des expertises complémentaires à travers VAN Petroleum, VAN BTP et VAN Logistique & Transport pour offrir des solutions fiables, structurées et adaptées aux besoins des entreprises, des institutions et des territoires.',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-in-a-city-1078-large.mp4',
     posterUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop'
   });
 
   const stats = [
-    { strong: t('hero.stats.poles'), span: t('hero.stats.polesDesc') },
-    { strong: t('hero.stats.quality'), span: t('hero.stats.qualityDesc') },
-    { strong: t('hero.stats.reactivity'), span: t('hero.stats.reactivityDesc') }
+    { strong: ready ? t('hero.stats.poles') : '3 pôles', span: ready ? t('hero.stats.polesDesc') : 'des métiers complémentaires' },
+    { strong: ready ? t('hero.stats.quality') : '+100%', span: ready ? t('hero.stats.qualityDesc') : 'engagement qualité & sécurité' },
+    { strong: ready ? t('hero.stats.reactivity') : '24/7', span: ready ? t('hero.stats.reactivityDesc') : 'réactivité opérationnelle' }
   ];
 
   const activities = [
     { 
-      title: t('hero.activities.petroleum.title'), 
-      text: t('hero.activities.petroleum.text'),
+      title: ready ? t('hero.activities.petroleum.title') : 'VAN Petroleum', 
+      text: ready ? t('hero.activities.petroleum.text') : 'Stations-service, distribution de produits pétroliers et services associés.',
       className: 'red'
     },
     { 
-      title: t('hero.activities.btp.title'), 
-      text: t('hero.activities.btp.text'),
+      title: ready ? t('hero.activities.btp.title') : 'VAN BTP', 
+      text: ready ? t('hero.activities.btp.text') : 'Construction d\'infrastructures industrielles et bâtiments spécialisés.',
       className: 'blue'
     },
     { 
-      title: t('hero.activities.logistics.title'), 
-      text: t('hero.activities.logistics.text'),
+      title: ready ? t('hero.activities.logistics.title') : 'VAN Logistique & Transport', 
+      text: ready ? t('hero.activities.logistics.text') : 'Transport de marchandises et gestion de la chaîne logistique.',
       className: 'gold'
     }
   ];
@@ -213,8 +213,12 @@ const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
                 <h1>{heroData.title}</h1>
                 <p>{heroData.description}</p>
                 <div className="hero-actions">
-                  <button className="btn btn-primary" onClick={() => scrollToSection("activities")}>Découvrir nos activités</button>
-                  <button className="btn btn-secondary" onClick={handleDevisClick}>Demander un devis</button>
+                  <button className="btn btn-primary" onClick={() => scrollToSection("activities")}>
+                    {ready ? t('hero.cta1') : 'Découvrir nos activités'}
+                  </button>
+                  <button className="btn btn-secondary" onClick={handleDevisClick}>
+                    {ready ? t('hero.cta2') : 'Demander un devis'}
+                  </button>
                 </div>
                 <div className="hero-stats">
                   {stats.map((stat, index) => (
@@ -229,7 +233,7 @@ const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
           </div>
 
           <div ref={heroPanelRef} className={`hero-panel reveal right ${revealed['hero-panel'] ? "visible" : ""}`}>
-            <h2 className="panel-title">Nos expertises clés</h2>
+            <h2 className="panel-title">{ready ? t('hero.activities') : 'Nos expertises clés'}</h2>
             <div className="activity-list">
               {activities.map((activity, index) => (
                 <div key={activity.title} className={`activity-card ${activity.className}`}>
