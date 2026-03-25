@@ -11,7 +11,7 @@ const Hero = ({ revealed, heroContentRef, heroPanelRef, addRevealRef }) => {
     eyebrow: '',
     title: ready ? t('hero.title') : 'VAN construit, alimente et connecte l\'avenir.',
     description: ready ? t('hero.description') : 'VAN International Group réunit des expertises complémentaires à travers VAN Petroleum, VAN BTP et VAN Logistique & Transport pour offrir des solutions fiables, structurées et adaptées aux besoins des entreprises, des institutions et des territoires.',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-highway-traffic-in-a-city-1078-large.mp4',
+    videoUrl: '', // Désactiver la vidéo temporairement
     posterUrl: 'https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=1600&auto=format&fit=crop'
   });
 

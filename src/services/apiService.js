@@ -4,6 +4,20 @@ const API_BASE_URL = import.meta.env.VITE_API_URL ||
     ? 'http://localhost:3000/api' 
     : 'https://van-international-backend.onrender.com/api');
 
+// Fallback temporaire pour les données statiques si le backend est down
+const FALLBACK_DATA = {
+  hero: {
+    id: 1,
+    eyebrow: '',
+    title: 'VAN construit, alimente et connecte l\'avenir.',
+    description: 'VAN International Group réunit des expertises complémentaires à travers VAN Petroleum, VAN BTP et VAN Logistique & Transport pour offrir des solutions fiables, structurées et adaptées aux besoins des entreprises, des institutions et des territoires.'
+  },
+  about: {
+    title: 'Un groupe multisectoriel au service de l\'Afrique',
+    description: 'Fondé en 2008, VAN International Group s\'est imposé comme un acteur majeur dans les secteurs de l\'énergie, de la construction et de la logistique en Afrique Centrale.'
+  }
+};
+
 // API Service
 const apiService = {
   // Configuration des headers
@@ -22,7 +36,7 @@ const apiService = {
     return headers;
   },
 
-  // Requête générique
+  // Requête générique avec fallback
   request: async (endpoint, options = {}) => {
     const url = `${API_BASE_URL}${endpoint}`;
     const config = {
@@ -41,6 +55,17 @@ const apiService = {
       return data;
     } catch (error) {
       console.error('API Error:', error);
+      
+      // Fallback vers les données statiques si le backend est inaccessible
+      if (endpoint === '/hero' && error.message.includes('fetch')) {
+        console.log('Backend inaccessible - utilisation des données fallback');
+        return { success: true, data: FALLBACK_DATA.hero };
+      }
+      if (endpoint === '/about' && error.message.includes('fetch')) {
+        console.log('Backend inaccessible - utilisation des données fallback');
+        return { success: true, data: FALLBACK_DATA.about };
+      }
+      
       throw error;
     }
   },
