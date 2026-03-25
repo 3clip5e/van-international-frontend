@@ -8,19 +8,19 @@ const Header = ({ scrolled, menuOpen, setMenuOpen }) => {
   const { t } = useTranslation();
   
   const navItems = [
-    { text: t('header.nav.about'), id: 'about' },
-    { text: t('header.nav.activities'), id: 'activities' },
-    { text: t('header.nav.projects'), id: 'projects' },
-    { text: t('header.nav.values'), id: 'values' },
-    { text: t('header.nav.contact'), id: 'contact' }
+    { text: t('about'), id: 'about' },
+    { text: t('activities'), id: 'activities' },
+    { text: t('projects'), id: 'projects' },
+    { text: t('values'), id: 'values' },
+    { text: t('contact'), id: 'contact' }
   ];
 
   return (
     <header className={`topbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container nav">
         <a href="#home" className="brand">
-          <img src={vanLogo} alt={t('header.brand')} className="brand-logo" />
-          <span>{t('header.brand')}</span>
+          <img src={vanLogo} alt={t('brand')} className="brand-logo" />
+          <span>{t('brand')}</span>
         </a>
 
         <nav className={`nav-links ${menuOpen ? "open" : ""}`}>
